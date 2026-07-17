@@ -1,0 +1,1719 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CIMA F2 Theory Reference Hub</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--text:#18212f;--muted:#667085;--line:#d9e0ea;--accent:#1459d9;--soft:#eaf1ff;--shadow:0 10px 30px rgba(29,41,57,.08)}
+[data-theme="dark"]{--bg:#0f1722;--panel:#172231;--text:#edf2f7;--muted:#a8b3c2;--line:#2b3a4d;--accent:#75a7ff;--soft:#1d3154;--shadow:none}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.58}
+a{color:var(--accent)} .app{display:grid;grid-template-columns:285px 1fr;min-height:100vh}
+aside{position:sticky;top:0;height:100vh;padding:22px 16px;background:var(--panel);border-right:1px solid var(--line);overflow:auto}
+.brand{font-size:20px;font-weight:800;margin:0 0 4px} .sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+.search{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);outline:none}
+.controls{display:flex;gap:8px;margin:10px 0 16px} button{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:9px;padding:8px 10px;cursor:pointer}
+nav a{display:block;text-decoration:none;color:var(--text);font-size:13px;padding:8px 9px;border-radius:8px;margin:2px 0} nav a:hover,nav a.active{background:var(--soft);color:var(--accent)}
+main{max-width:1100px;width:100%;padding:34px 44px 70px} .hero{background:linear-gradient(135deg,var(--panel),var(--soft));border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:22px;box-shadow:var(--shadow)}
+.hero h1{margin:0 0 8px;font-size:34px;line-height:1.15} .hero p{margin:0;color:var(--muted)} .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px} .pill{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:13px}
+.topic-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;margin:18px 0;box-shadow:var(--shadow);scroll-margin-top:18px} .topic-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:20px 22px;border-bottom:1px solid var(--line)}
+.topic-head h2{margin:0;font-size:24px} .meta,.page-label{color:var(--muted);font-size:12px} .topic-content{padding:4px 22px 22px} .pdf-page{padding:18px 0;border-bottom:1px dashed var(--line)} .pdf-page:last-child{border-bottom:0}
+h4{font-size:17px;margin:22px 0 8px;color:var(--accent)} h5{font-size:15px;margin:20px 0 7px} p{margin:7px 0} ul{margin:7px 0 12px;padding-left:23px} li{margin:4px 0}
+.formula,.journal{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft);border-left:4px solid var(--accent);padding:9px 11px;border-radius:6px;margin:8px 0;overflow:auto}
+.page-image{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin-top:10px} mark{background:#ffe06a;color:#111;border-radius:3px;padding:0 2px}
+.hidden{display:none!important} .collapsed .topic-content{display:none} .collapsed .topic-head{border-bottom:0}
+.no-results{display:none;text-align:center;color:var(--muted);padding:30px}
+@media(max-width:850px){.app{display:block}aside{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav{display:none}main{padding:20px 14px 50px}.hero h1{font-size:28px}}
+@media print{aside,.controls,.collapse{display:none!important}.app{display:block}main{max-width:none;padding:0}body{background:white;color:black}.topic-card,.hero{box-shadow:none;break-inside:avoid;border-color:#aaa}.topic-content{display:block!important}}
+</style></head>
+<body><div class="app"><aside><div class="brand">CIMA F2 Reference</div><div class="sub">Searchable, GitHub-ready study hub</div>
+<input id="search" class="search" placeholder="Search all notes..." aria-label="Search notes"><div class="controls"><button id="theme">Theme</button><button id="expand">Expand all</button></div><nav><a href="#consolidation-mindmap" data-nav>Consolidation mindmap</a>
+<a href="#wacc-ifrs-15-ratios-analysis-debt-vs-equity" data-nav>(WACC, IFRS 15, Ratios analysis, Debt vs equity)</a>
+<a href="#ias-37-ias-24-ias-38-ias-33" data-nav>(IAS 37, IAS 24, IAS 38, IAS 33)</a>
+<a href="#foreign-subsidiary" data-nav>Foreign Subsidiary</a>
+<a href="#ias-21-effect-of-changes-in-foreign-exchange-rates" data-nav>IAS 21 - Effect of Changes in Foreign Exchange Rates</a>
+<a href="#ias-32-ifrs-9-financial-instruments" data-nav>IAS 32, IFRS 9 - Financial instruments</a>
+<a href="#ifrs-15-revenue-from-contracts-with-customers" data-nav>IFRS 15 - Revenue from contracts with customers</a>
+<a href="#ifrs-16-leases" data-nav>IFRS 16 - Leases</a>
+<a href="#ias-24-related-party" data-nav>IAS 24- Related party</a>
+<a href="#ias-33-eps" data-nav>IAS 33-EPS</a>
+<a href="#ias-37-provisions" data-nav>IAS 37-Provisions</a>
+<a href="#ias-38-intangible-assets" data-nav>IAS 38- Intangible Assets</a>
+<a href="#ias12-income-taxes" data-nav>IAS12- Income taxes</a>
+<a href="#integrated-reporting" data-nav>Integrated Reporting</a>
+<a href="#long-term-finance" data-nav>Long Term Finance</a>
+<a href="#wacc" data-nav>WACC</a></nav></aside>
+<main><header class="hero"><h1>CIMA F2 Theory Reference Hub</h1><p>Consolidated study notes covering consolidation, WACC, IFRS and IAS topics, integrated reporting and long-term finance.</p><div class="stats"><span class="pill">16 source documents</span><span class="pill">Searchable offline</span><span class="pill">Single HTML file</span><span class="pill">GitHub Pages compatible</span></div></header><div id="noResults" class="no-results">No matching topic found.</div><article class="topic-card searchable" id="consolidation-mindmap" data-title="Consolidation mindmap">
+<div class="topic-head"><div><h2>Consolidation mindmap</h2><div class="meta">1 page · Source: Consolidation mindmap.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><img class="page-image" alt="Consolidation mindmap page 1" src="consolidation-mindmap.png"></section></div></article>
+<article class="topic-card searchable" id="wacc-ifrs-15-ratios-analysis-debt-vs-equity" data-title="(WACC, IFRS 15, Ratios analysis, Debt vs equity)">
+<div class="topic-head"><div><h2>(WACC, IFRS 15, Ratios analysis, Debt vs equity)</h2><div class="meta">15 pages · Source: F2 theory refresh notes - 10.09..2023 (WACC, IFRS 15, Ratios analysis, Debt vs equity).pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>WACC</h4>
+<p>2 main sources of finance for a listed company: EQUITY &amp; DEBT</p>
+<p>Equity: Ordinary share capital, reserves and irredeemable preference shares</p>
+<p>Debt: Bank loans, redeemable preference shares, debentures, bonds, lease</p>
+<p>liabilities, etc.</p>
+<p>Equity holders expect a dividend - Cost of equity (calculated using the dividend</p>
+<p>valuation model)</p>
+<p>Debt providers expect an interest - Cost of debt</p>
+<p>Since interest has a tax benefit, the post-tax cost of debt has to be considered.</p>
+<p>E.g., if cost of debt is 8% and the tax rate is 30%, the post-tax cost of debt would be</p>
+<p>8% * (1 - 0.3) = 8%*0.7 = 5.6%</p>
+<h4>Cost of equity is ALWAYS higher than cost of debt….</h4>
+<p>This is since ordinary shareholders accept a higher risk compared to debt providers.</p>
+<p>Another reason for this is the tax benefit enjoyed by debt.</p>
+<p>Weighted Average Cost of Capital (WACC)</p>
+<p>Since most companies use multiple sources of finance with different costs of capital</p>
+<p>attached to each source, the WACC calculates an average cost of capital using all</p>
+<p>the sources. This will be calculated based on the market values of each source.</p>
+<h4>Example</h4>
+<div class="formula">Dividend paid this year = 40c</div>
+<div class="formula">Expected dividend growth rate = 4%</div>
+<div class="formula">Current market price per share = $6</div>
+<div class="formula">Number of ordinary shares = 1,000,000 with a nominal value of $2 each</div></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><div class="formula">Pre-tax cost of debt = 7.5%</div>
+<div class="formula">Tax rate = 30%</div>
+<div class="formula">Market value of debt = $2,700,000</div>
+<p>Calculate the WACC</p>
+<h4>Cost of equity = [0.4*1.04] / 6 + 0.04 = 0.416/6 + 0.04 = 10.9%</h4>
+<div class="formula">Post-tax cost of debt = 7.5%*70% = 5.25%</div>
+<div class="formula">Market value of equity = 1,000,000*6 = 6,000,000</div>
+<div class="formula">Market value of debt = 2,700,000</div>
+<div class="formula">Total market value = 8,700,000</div>
+<h5>WACC = 0.109*(6,000,000/8,700,000) + 0.0525*(2,700,000/8,700,000)</h5>
+<p>= 9.1%</p>
+<p>If the business undertakes a project with a higher business risk, the WACC used</p>
+<p>should be higher (i.e., a risk premium should be added). For example, if WACC is</p>
+<p>12%, we can add a risk premium of, say, 2% and use 14% as the cost of capital.</p>
+<p>When can the current WACC be used as a discount rate?</p>
+<p>The current WACC is often used as a discount rate when using net present value or internal rate</p>
+<h5>of return calculations. However, this is only appropriate if the following conditions are met:</h5>
+<p>1 The capital structure is constant. If the capital structure changes, the weightings in the WACC</p>
+<p>will also change.</p>
+<p>2 The new investment does not carry a different business risk profile to the existing entity&#x27;s</p>
+<p>operations.</p>
+<p>3 The new investment is marginal to the entity. If we are only looking at a small investment then</p>
+<p>we would not expect any of cost of equity, cost of debt or the WACC to change materially. If the</p>
+<p>investment is substantial, it will usually cause these values to change.</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><h4>Example</h4>
+<h4>Current capital structure:</h4>
+<div class="formula">Equity = $20m (50%)</div>
+<div class="formula">Debt = $20m (50%)</div>
+<h4>Cost of equity = 14%</h4>
+<div class="formula">Post-tax cost of debt = 8%</div>
+<div class="formula">Current WACC = 0.14*20/40 + 0.08*20/40 = 11%</div>
+<h4>Scenario 1</h4>
+<p>The business plans to invest in a new project with an investment of $10m. The project is financed</p>
+<p>by 50% equity and 50% debt. What is the COC used to appraise this project?</p>
+<p>We can use the current WACC of 11% since the capital structure will not change.</p>
+<h4>Scenario 2</h4>
+<p>The business plans to invest in a new project with an investment of $10m. The project is financed</p>
+<p>by 100% equity. What is the COC used to appraise this project?</p>
+<p>We should recalculate the WACC since the capital structure has changed.</p>
+<h4>WACC = 0.14*30/50 + 0.08*20/50 = 11.6%</h4>
+<h4>Scenario 3</h4>
+<p>The business plans to invest in a new project with an investment of $1m. The project is financed</p>
+<p>by 100% equity. What is the COC used to appraise this project?</p>
+<p>We can use the current WACC of 11% since this new investment is marginal to the value to the</p>
+<p>entity (i.e., the current value of the business is $40m but this investment is only $1m and hence</p>
+<p>a very small investment).</p>
+<ul>
+<li>If new shares are issued - WACC will increase since cost of equity is higher than cost of debt</li>
+<li>If new debt is raised - WACC will decrease</li>
+</ul>
+<h4>IFRS 15 - Revenue recognition</h4>
+<p>On 01/Oct, issued the invoice to customer</p>
+<p>On 05/Oct, customer made the payment</p>
+<p>On 10/Oct, shipment arrived</p>
+<p>On 12/Oct, customer collected the car</p></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><p>Sale should be recorded on 12/Oct since this is the day where the risks and rewards</p>
+<p>of ownership as well as control of the item was transferred to the customer.</p>
+<p>Contract</p>
+<p>Obligations</p>
+<p>Price</p>
+<p>Allocate (the price among obligations)</p>
+<p>Recognise</p>
+<ul>
+<li>At a point of time</li>
+<li>Over a period of time (time apportion)</li>
+</ul>
+<h4>Example - Variable consideration</h4>
+<p>A construction company undertakes a contract for $3m and the customer specifies</p>
+<p>that a bonus payment of $1m will be made if the contract is complete within 3</p>
+<p>months.</p>
+<p>The revenue recognized should be $3m and the bonus of $1m also can be</p>
+<p>recognized as revenue only if the company is reasonably certain that the</p>
+<p>construction can be completed within 03 months.</p>
+<h4>Example - Significant financing component</h4>
+<p>A business made a sale to a customer on 01/01/2020 for $20 million. The customer</p>
+<p>will settle this amount on 31/12/2021. Company’s year end is on 31/December.</p>
+<p>Consider cost of capital to be 10%.</p></section>
+<section class="pdf-page"><div class="page-label">Page 5</div><h4>Answer:</h4>
+<p>10% 2 year discount factor is 0.826</p>
+<div class="formula">Present value = 20*0.826 = 16.52</div>
+<p>or</p>
+<div class="formula">Present value = 20/1.12 = 16.52</div>
+<p>At the point of sale (01/01/2020)</p>
+<div class="journal">Dr. Receivables</div>
+<p>16.52</p>
+<div class="journal">Cr. Revenue</div>
+<p>16.52</p>
+<p>At the end of the year (31/12/2020)</p>
+<p>The discount should be unwounded</p>
+<div class="formula">Finance income = 16.52*10% = 1.65</div>
+<div class="journal">Dr. Receivables</div>
+<p>1.65</p>
+<div class="journal">Cr. Finance income (SOPL)</div>
+<p>1.65</p>
+<p>Receivables balance on 31/12/2020 = 16.52 + 1.65 = 18.17</p>
+<p>At the point of customer payment (31/12/2021)</p>
+<p>The discount should be unwounded</p>
+<div class="formula">Finance income = 18.17*10% = 1.82</div>
+<div class="journal">Dr. Receivables</div>
+<p>1.82</p>
+<div class="journal">Cr. Finance income SOPL)</div>
+<p>1.82</p>
+<div class="formula">Receivables = 18.17 + 1.82 = 19.99 (approx. 20m)</div>
+<div class="journal">Dr. Cash</div>
+<div class="journal">Cr. Receivables</div></section>
+<section class="pdf-page"><div class="page-label">Page 6</div><h4>Example - Accounting for discounts</h4>
+<p>The business sells a computer and two year maintenance contract to a customer at</p>
+<p>a price of $40,000. The computer is usually sold for $35,000 but the maintenance</p>
+<p>is not sold as a separate product. The cost of the maintenance to the business is</p>
+<p>$10,000 and the business usually sells with a 50% markup. Allocate the revenue</p>
+<p>between the computer and the service agreement.</p>
+<h4>Answer:</h4>
+<h4>Full selling price:</h4>
+<div class="formula">Computer = 35,000</div>
+<div class="formula">Maintenance = 10,000 + (10,000*50%) = 15,000</div>
+<div class="formula">Total = 50,000</div>
+<div class="formula">Discount = 50,000 - 40,000 = 10,000</div>
+<p>Discount % = 10,000/50,000 = 20%</p>
+<h4>Revenue attributable to the:</h4>
+<div class="formula">Computer = 35,000 - (35,000*20%) = 28,000</div>
+<div class="formula">Maintenance = 15,000 - (15,000*20%) = 12,000</div>
+<p>Sale took place on 01/Sep/2021 and year end is on 31/Dec</p>
+<p>Total revenue for 2021 = 28,000 + (12,000 *4/24) = 28,000 + 2,000 = 30,000</p></section>
+<section class="pdf-page"><div class="page-label">Page 7</div><h4>Consignment inventory</h4>
+<h4>Scenario 1</h4>
+<p>HP purchases inventory from a manufacturer named ABC Ltd where the agreement</p>
+<p>states that HP will bear the loss of any unsold goods.</p>
+<p>In this case, HP will record the purchase and inventory value on the day the</p>
+<p>manufacturer transfers the items. ABC Ltd will account for the revenue on the day</p>
+<p>the items are transferred to HP.</p>
+<h4>Scenario 2</h4>
+<p>HP purchases inventory from a manufacturer named DEF Ltd where the agreement</p>
+<p>states that DEF Ltd will bear the loss of any unsold goods.</p>
+<p>In this case, HP will not pass any entries upon receiving the goods and the inventory</p>
+<p>will still be recorded in the books of DEF Ltd. Upon a sale being made to the</p>
+<p>customer, HP will record the revenue and include the item under cost of sales and</p>
+<p>at this point, DEF Ltd can derecognize the inventory and record revenue.</p>
+<h4>Integrated reporting</h4>
+<ul>
+<li>Financial capital (impact on debt and equity)</li>
+<li>Manufacturing capital (tangible non-current assets)</li>
+<li>Social &amp; relationship capital (relationships with stakeholder such as suppliers,</li>
+</ul>
+<p>customers, authorities, etc.)</p>
+<ul>
+<li>Human capital (skills, competencies, knowledge and experience of employees)</li>
+<li>Intellectual capital (intangible assets - not only the ones shown in financial</li>
+</ul>
+<p>statements)</p>
+<ul>
+<li>Natural capital (how operations affect the environment)</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 8</div><h4>Foreign subsidiary</h4>
+<p>A USA parent company (A) has an Indian subsidiary (B). A owns 80% of B. The net</p>
+<h4>assets of B were as follows:</h4>
+<p>01/Jan/2021 = INR 500,000</p>
+<p>31/Dec/2021 = INR 600,000</p>
+<p>Therefore, profit for the year is INR 100,000</p>
+<h4>Exchange rates:</h4>
+<p>01/Jan/2021: $1 = INR 75</p>
+<p>31/Dec/2021: $1 = INR 85</p>
+<p>Average rate for 2021: $1 = 78</p>
+<p>INR</p>
+<p>$</p>
+<p>Opening net assets</p>
+<p>500,000</p>
+<p>6,667 (500,000/75)</p>
+<p>Profit for the year</p>
+<p>100,000</p>
+<p>1,282 (100,000/78)</p>
+<p>7,949</p>
+<p>Foreign exchange loss</p>
+<p>(890)</p>
+<p>Closing net assets</p>
+<p>600,000</p>
+<p>7,059 (600,000/85)</p>
+<h5>This foreign exchange loss on net assets will be split as follows:</h5>
+<ul>
+<li>890*80% = 712 will be deducted from the parent (group reserves)</li>
+<li>890*20% = 178 will be deducted from NCI</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 9</div><p>A USA parent company (A) has an Indian subsidiary (B). A owns 80% of B. The</p>
+<p>goodwill on acquisition (01/Jan/2021) was INR 20,000 and this has impaired by</p>
+<p>INR 4,000.</p>
+<h4>Exchange rates:</h4>
+<p>01/Jan/2021: $1 = INR 75</p>
+<p>31/Dec/2021: $1 = INR 85</p>
+<p>Average rate for 2021: $1 = 78</p>
+<p>INR</p>
+<p>$</p>
+<p>Opening goodwill</p>
+<p>20,000</p>
+<p>267 (20,000/75)</p>
+<p>Impairment for the year</p>
+<p>(4,000)</p>
+<p>(51) (4,000/78)</p>
+<p>Foreign exchange loss</p>
+<p>(28)</p>
+<p>Closing goodwill</p>
+<p>16,000</p>
+<p>188 (16,000/85)</p></section>
+<section class="pdf-page"><div class="page-label">Page 10</div><h4>Associates:</h4>
+<p>Equity accounting</p>
+<ul>
+<li>Goodwill is not calculated</li>
+<li>Assets, liabilities, incomes and expenses are NOT consolidated line by line</li>
+<li>In the CSOFP = A single line under non-current assets stating “Investment in</li>
+</ul>
+<p>associate”</p>
+<ul>
+<li>In the CSOPL = A single line below operating profit stating “Share of profit</li>
+</ul>
+<p>from associate”</p>
+<ul>
+<li>Investment in associate in the SOFP = Original investment value + Parent’s %</li>
+</ul>
+<p>of associate’s post acquisition reserves - Total impairment of the investment</p>
+<ul>
+<li>Share of profit from associate = (Associate’s profit for the year*Parent’s %) -</li>
+</ul>
+<p>Impairment of investment during the current year</p>
+<ul>
+<li>Intra-group transactions are NOT eliminated except parent’s share of any</li>
+</ul>
+<p>provision for unrealized profit in inventory</p></section>
+<section class="pdf-page"><div class="page-label">Page 11</div><p>Interpretation of financial statements (Ratio analysis)</p>
+<p>Profitability ratios</p>
+<div class="formula">Gross Profit margin = Gross profit / Revenue</div>
+<ul>
+<li>This will be affected by the selling price, the production (or purchasing) cost</li>
+</ul>
+<p>and the mix between products.</p>
+<ul>
+<li>If sales revenue increases, this will not directly affect GP margin. Because</li>
+</ul>
+<p>sales revenue and cost of sales will increase proportionately.</p>
+<div class="formula">Operating Profit margin = Operating profit / Revenue</div>
+<ul>
+<li>Operating profit = Gross profit - Operational expenses (excluding finance</li>
+</ul>
+<p>cost and tax)</p>
+<ul>
+<li>Will be affected by the same factors affecting GP margin</li>
+<li>In addition to that, control over administration and distribution costs will</li>
+</ul>
+<p>affect OP margin</p>
+<div class="formula">Net Profit margin = Net profit / Revenue</div>
+<ul>
+<li>Will be affected by the same factors affecting OP margin</li>
+<li>In addition to that, finance cost and tax will also affect net profit</li>
+</ul>
+<div class="formula">Return on capital employed = Operating profit / Capital employed</div>
+<ul>
+<li>Capital employed = Equity + Long-term borrowing</li>
+<li>Capital employed is also referred to as Net Assets (Total assets - Current</li>
+</ul>
+<p>liabilities)</p>
+<ul>
+<li>Will be affected by the same factors affecting OP margin</li>
+<li>One of the most important ratios checked by investors</li>
+<li>A share issue or a borrowing would have an immediate impact of reducing</li>
+</ul>
+<p>ROCE. However, if the money is invested in a profitable manner, future</p>
+<p>ROCE will improve.</p></section>
+<section class="pdf-page"><div class="page-label">Page 12</div><div class="formula">Return on equity = Profit for the year / Equity</div>
+<ul>
+<li>Money raised through borrowings will not affect the denominator but can</li>
+</ul>
+<p>improve the ROE if the money generates profit quickly.</p>
+<div class="formula">Asset turnover ratio = Revenue / Capital employed</div>
+<ul>
+<li>Assesses the revenue generating ability of the assets invested</li>
+</ul>
+<div class="formula">Operating profit margin * Asset turnover ratio = ROCE</div>
+<p>Liquidity ratios</p>
+<div class="formula">Current ratio = Current assets / Current liabilities</div>
+<ul>
+<li>Generally, a ratio of 2:1 is preferred, although the ideal current ratio</li>
+</ul>
+<p>depends on the industry.</p>
+<ul>
+<li>If the figure is too high, this is an indication that the business is not making</li>
+</ul>
+<p>best use of the assets such as cash and also reflects a high risk due to high</p>
+<p>inventory and high receivables.</p>
+<p>Quick ratio (acid rest ratio) = (Current assets - Inventory) / Current liabilities</p>
+<ul>
+<li>Removes the least liquid asset which is inventory and the numerator is</li>
+</ul>
+<p>referred to as “quick assets”</p>
+<ul>
+<li>Generally, a ratio of 1:1 is preferred, although the ideal quick ratio depends</li>
+</ul>
+<p>on the industry.</p>
+<p>Working capital ratios</p>
+<p>Inventory days (inventory turnover period) = Inventory / Cost of sales * 365</p>
+<ul>
+<li>Measures how long inventory remains in the business before being sold.</li>
+<li>Lower the better.</li>
+</ul>
+<p>Receivables days (receivables collection period) = Receivables / Revenue * 365</p>
+<ul>
+<li>Measures how long it takes to collect money from credit customers.</li>
+<li>Lower the better.</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 13</div><p>Payables days (payables payment period) = Payables / Cost of sales * 365</p>
+<ul>
+<li>Measures how long the business takes to settle its creditors</li>
+<li>Higher the better. However, if payments are dragged for long, it will affect</li>
+</ul>
+<p>the relationship with suppliers.</p>
+<div class="formula">Working capital cycle = Inventory days + Receivables days - Payables days</div>
+<ul>
+<li>Shows how long it takes for inventory to be converted to cash</li>
+<li>Lower the better</li>
+<li>A higher WCC will increase the finance cost since money will have to be</li>
+</ul>
+<p>borrowed to settle suppliers</p>
+<p>Capital structure (risk) ratios</p>
+<div class="formula">Gearing ratio = Debt capital / (Debt capital + Equity capital)</div>
+<ul>
+<li>A gearing ratio of above 50% is generally considered to be risky although it</li>
+</ul>
+<p>depends on the industry.</p>
+<div class="formula">Debt to equity ratio = Debt capital / Equity capital</div>
+<ul>
+<li>A ratio of above 100% is generally considered to be risky although it</li>
+</ul>
+<p>depends on the industry.</p>
+<div class="formula">Interest cover = Operating profit / Finance cost</div>
+<ul>
+<li>Measures how many times the profit can cover interest</li>
+<li>Higher the better</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 14</div><p>Debt vs Equity</p>
+<ul>
+<li>Equity does not have to be repaid. Need not pay a guaranteed annual return.</li>
+<li>However, debt is repayable along with an annual interest. This makes debt</li>
+</ul>
+<p>riskier for the business.</p>
+<ul>
+<li>Issuing equity instead of debt will lower the gearing ratio.</li>
+<li>Raising debt will increase the gearing ratio which would make the company</li>
+</ul>
+<p>appear risky in the eyes of investors.</p>
+<ul>
+<li>Debt may have covenants attached to it. Covenants are restrictive conditions</li>
+</ul>
+<p>imposed by the debt provider upon providing debt such as dividend payment</p>
+<p>limits, acceptable profit margins and other ratios, further borrowings, etc.</p>
+<ul>
+<li>When raising debt through sources such as bank loans, collateral assets</li>
+</ul>
+<p>would have to be placed. This would make it difficult to sell those assets.</p>
+<ul>
+<li>A share issue is time consuming and costlier than raising debt. When a share</li>
+</ul>
+<p>issue is made, it will involve issuing a prospectus, underwriting charges and</p>
+<p>other administrative cost.</p>
+<ul>
+<li>If capital is raised through equity, this will increase the number of shares in</li>
+</ul>
+<p>issue and hence the EPS will reduce. Shareholders may be unhappy if EPS</p>
+<p>reduces.</p>
+<ul>
+<li>Raising capital through shares will increase the equity portion of the capital</li>
+</ul>
+<p>structure. Since cost of equity is always higher than cost of debt, this will</p>
+<p>increase the WACC.</p>
+<ul>
+<li>If a project takes some time to generate positive cash flows and if the project</li>
+</ul>
+<p>is a long term one, it is advisable to go for equity.</p>
+<ul>
+<li>For a medium-term project (say 3 to 5 years), it is advisable to go for debt.</li>
+</ul>
+<h4>Rights issue</h4>
+<p>➢ Faster and less costly compared to a public issue.</p>
+<p>➢ However, the amount received will be lower than a public issue since the share</p>
+<p>price is given at a discounted rate. Furthermore, some of the existing</p>
+<p>shareholders may not subscribe to the rights issue and this can reduce the</p>
+<p>proceeds.</p></section>
+<section class="pdf-page"><div class="page-label">Page 15</div><p>➢ It is generally accepted a rights issue should raise at least 20% or more of the</p>
+<p>existing capital value. If the amount of capital to be raised is lower than this, it</p>
+<p>is advisable to go for debt financing.</p></section></div></article>
+<article class="topic-card searchable" id="ias-37-ias-24-ias-38-ias-33" data-title="(IAS 37, IAS 24, IAS 38, IAS 33)">
+<div class="topic-head"><div><h2>(IAS 37, IAS 24, IAS 38, IAS 33)</h2><div class="meta">8 pages · Source: F2 theory refresh notes -09.09.2023 (IAS 37, IAS 24, IAS 38, IAS 33).pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS 37</h4>
+<h4>Liability:</h4>
+<p>Obligation with a certain amount and certain timing</p>
+<h4>Provision:</h4>
+<p>Uncertain amount and uncertain timing</p>
+<h4>Conditions to be satisfied:</h4>
+<p>1. Present obligation due to a past event</p>
+<p>2. Probable outflow of economic benefits</p>
+<p>3. Reliable estimate can be made</p>
+<div class="formula">Probable = Probability is more than 50%</div>
+<div class="formula">Possible = Probability is less than 50%</div>
+<h4>Example:</h4>
+<p>Year end is on 31/Dec/2022.</p>
+<p>A customer slipped and fell in the premises on 12/Dec/2022 and now taking legal</p>
+<p>action for negligence. The legal case will go on to 15/Jan/2023. Lawyers say that</p>
+<p>there is a 70% chance we will lose the case and have to pay a compensation of</p>
+<p>$10,000.</p>
+<h4>On 31/Dec/2022:</h4>
+<ul>
+<li>Legal obligation due to a past event</li>
+<li>Probable since it is 70%</li>
+<li>There is a reliable estimate</li>
+</ul>
+<p>Accounting treatment - Include a provision under current liabilities in the SOFP of</p>
+<p>$7,000 and include a corresponding expense in the SOPL of $7,000</p>
+<h4>Obligations:</h4>
+<ul>
+<li>Legal obligation - E.g., a legal case</li>
+<li>Constructive obligation - E.g., An exchange or return policy publicised by the</li>
+</ul>
+<p>company (although it was not legally necessary)</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>TYU1</p>
+<p>There is a legal obligation since a legislation has been passed. When the company</p>
+<p>has to rectify damage, there is an outflow of economic benefits and it is certain that</p>
+<p>this should be carried out. The company may be able to assess the damage done</p>
+<p>and come up with a reliable estimate.</p>
+<p>If the rectification has to be done after a few years, then the provision should be</p>
+<p>under non-current liabilities.</p>
+<p>TYU2</p>
+<p>Answer C</p>
+<p>The provision should be created for the entire future estimate. Every year, the</p>
+<p>provision should be recalculated and any increase/decrease should be adjusted.</p>
+<h4>Expected losses:</h4>
+<p>There is no obligation to continue the business if it is expecting a loss. Therefore,</p>
+<p>no provision can be created.</p>
+<h4>Restructuring:</h4>
+<p>The provision for restructuring cannot include the cost of redeploying and training</p>
+<p>the affected staff. Because there is no obligation to redeploy or train staff</p>
+<p>members. The provision should include the redundancy package cost and legal</p>
+<p>cost.</p>
+<p>Illustration 4</p>
+<p>A provision cannot be created since the closure is not announced/communicated</p>
+<p>to the affected employees.</p>
+<h4>Contingent liability:</h4>
+<ul>
+<li>Probability less than 50%, or</li>
+<li>Probability more than 50% but reliable estimate cannot be made</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><h4>IAS 24 - Related party disclosures</h4>
+<h4>Related parties:</h4>
+<p>1. KMP - Key management personnel (directors of the company - both</p>
+<p>executive and non-executive)</p>
+<p>2. Close family members of KMP (parents, siblings, spouse, children)</p>
+<p>3. Entities within the same group (parent, subsidiary, associate or joint venture)</p>
+<h4>Example</h4>
+<p>A and B have formed a joint venture called C.</p>
+<h4>Transaction between:</h4>
+<ul>
+<li>A and C - Related party transaction</li>
+<li>B and C - Related party transaction</li>
+<li>A and B - Not a related party transaction</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><h4>IAS 38 - Intangible assets</h4>
+<ul>
+<li>Separately identifiable</li>
+<li>Cost must be measured reliably</li>
+<li>Probable future economic benefits</li>
+</ul>
+<h4>Example</h4>
+<p>Netflix acquires a movie licence valid for 10 years at a cost of $20 million.</p>
+<div class="formula">Every year, amortization expense = 20/10 = $2m</div>
+<ul>
+<li>If the asset has a definite useful life: amortize it annually and impair if</li>
+</ul>
+<p>relevant</p>
+<ul>
+<li>If the asset has an indefinite useful life: conduct an annual impairment</li>
+</ul>
+<p>review</p>
+<p>An example of an intangible asset that has an active market and can be accounted</p>
+<p>using the revaluation model would be cryptocurrencies.</p>
+<p>Most of the intangible assets are accounted using the cost model since it is very</p>
+<p>difficult to find an active market to use the revaluation model.</p>
+<p>The following costs can never be capitalized and instead, have to be written off as</p>
+<h4>expenses to the SOPL:</h4>
+<ul>
+<li>Research</li>
+<li>Marketing and branding</li>
+<li>Staff training</li>
+</ul>
+<h4>6 conditions to be satisfied to capitalize development cost:</h4>
+<p>Separate / sellable asset</p>
+<p>Expenditure measurable</p>
+<p>Commercially viable</p>
+<p>Technically feasible</p>
+<p>Overall profitable (total expected benefit &gt; total expected cost)</p>
+<p>Resources available to complete</p></section>
+<section class="pdf-page"><div class="page-label">Page 5</div><p>All the development cost incurred until the point where the 06 conditions are</p>
+<p>satisfied should be treated as expenses.</p>
+<p>After the 06 conditions are met, any subsequent development cost can be</p>
+<p>capitalized. Amortization should start only after production begins.</p>
+<h4>IAS 33 - Earnings per share</h4>
+<p>EPS is the only accounting ratio governed by an accounting standard.</p>
+<div class="formula">EPS = Earnings / Weighted average number of shares</div>
+<div class="formula">Earnings = Profit after tax - Irredeemable preference share dividend</div>
+<p>The business has to always disclose this year’s EPS and last year’s EPS (comparative</p>
+<p>EPS).</p>
+<h4>Example</h4>
+<p>The profit for the year is $2,500,000. The irredeemable preference share dividend</p>
+<p>is $300,000. The company had 1,000,000 shares at the start of the year and issued</p>
+<p>a further 600,000 shares on 01/Oct. The year end is on 31/Dec. Calculate the EPS.</p>
+<div class="formula">Earnings = 2,500,000 - 300,000 = 2,200,000</div>
+<div class="formula">Weighted average number of shares = 1,000,000 + (600,000 * 3/12) = 1,150,000</div>
+<div class="formula">EPS = 2,200,000/1,150,000 = 191c per share of $1.91 per share</div></section>
+<section class="pdf-page"><div class="page-label">Page 6</div><h4>Bonus issue</h4>
+<p>This is where shares are issued to existing shareholders free of charge. This is</p>
+<p>generally issued as an alternative to a dividend payment.</p>
+<p>If a bonus issue is made, it is assumed that these shares were in existence from the</p>
+<p>commencement of the business. Last year’s EPS should be adjusted with the bonus</p>
+<p>shares (and therefore it will reduce).</p>
+<h4>Rights issue</h4>
+<p>A rights issue is when shares are issued only to existing shareholders at a discount</p>
+<p>to the market price.</p>
+<p>When a rights issue is made, a component of this is a regular share issue and a</p>
+<p>component is a bonus issue. For the bonus issue component, we have to adjust last</p>
+<p>year’s comparative EPS (it will reduce). The regular component should be</p>
+<p>accounted the normal way (time-apportion when calculating the weighted average</p>
+<p>number of shares).</p>
+<h4>Example</h4>
+<p>The current share price is $5 and the company makes a rights issue of 200,000</p>
+<p>shares for $4. This means that 1/5 or 20% of the shares are similar to a bonus issue.</p>
+<p>Therefore, this is like issuing 200,000*20% = 40,000 shares free (i.e., bonus issue).</p>
+<p>These 40,000 bonus shares will be added to last year’s and this year’s denominator</p>
+<p>and hence will reduce last year’s and current year’s EPS.</p>
+<h4>Diluted earnings per share (DEPS)</h4>
+<p>DEPS represents the possible impact on the future EPS due to instruments such as</p>
+<p>convertible debt and share options.</p>
+<p>A convertible debt is a loan issued by the company where the holder is allowed to</p>
+<p>convert the loan to shares upon maturity if he/she wishes to do so.</p></section>
+<section class="pdf-page"><div class="page-label">Page 7</div><p>A share option is an option for an individual to purchase shares in the company at</p>
+<p>a pre-agreed price at a particular point of time.</p>
+<p>A convertible bond could possibly increase the number of shares in future and</p>
+<p>therefore dilute the EPS. Similarly, share options could also increase the number of</p>
+<p>shares in future and therefore dilute the EPS. The DEPS will show the EPS IF the</p>
+<p>convertible bond is converted and share options are exercised.</p>
+<p>Another point we need to remember is that if a convertible bond is converted to</p>
+<p>shares, this would reduce the finance cost (interest expense) since finance cost only</p>
+<p>applies for debt and not for equity.</p>
+<p>When calculating the number of shares from options, we have to consider the</p>
+<h4>following formula:</h4>
+<p>No. of options × ( [FV - EP] / FV)</p>
+<div class="formula">FV = Fair value (market price of share)</div>
+<div class="formula">EP = Exercise price</div>
+<p>This formula is similar to how we calculated bonus shares in the rights issue note</p>
+<p>above.</p>
+<h4>Example</h4>
+<p>The company has issued 300,000 share options where shares can be purchased for</p>
+<p>a discounted price of $5 each. The current share price is $8.</p>
+<div class="formula">Number of options to consider DEPS = 300,000 * 3/8 = 112,500</div></section>
+<section class="pdf-page"><div class="page-label">Page 8</div><h4>Example</h4>
+<p>The earnings of the company is $400,000 and the number of shares amounts to</p>
+<p>300,000. It has issued a convertible bond for $100,000 with an interest of 8% and</p>
+<p>the bond holders have the option of converting this to 100,000 shares in 03 years’</p>
+<p>time. The company has also issued share options for 50,000 shares. The market</p>
+<p>price of an ordinary share was $5 and the exercise price for the shares under option</p>
+<p>was $3. Calculate the EPS and the DEPS.</p>
+<div class="formula">EPS = 400,000/300,000 = $1.33 per share</div>
+<div class="formula">If convertible bond is converted to shares, there is an interest saving = 100,000*8%</div>
+<p>= 8,000</p>
+<div class="formula">Number of options = 50,000 * 2/5 = 20,000</div>
+<div class="formula">DEPS = (Earnings + Notional earnings) / (Weighted number of shares + Notional</div>
+<p>shares)</p>
+<p>= (400,000 + 8,000) / (300,000 + 100,000 + 20,000)</p>
+<p>= 408,000 / 420,000 = $0.97 per share</p></section></div></article>
+<article class="topic-card searchable" id="foreign-subsidiary" data-title="Foreign Subsidiary">
+<div class="topic-head"><div><h2>Foreign Subsidiary</h2><div class="meta">1 page · Source: Foreign Subsidiary.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>Foreign Subsidiaries</h4>
+<h4>Translation of SOPL &amp; OCI</h4>
+<p>•</p>
+<p>Income and expenses at the average rate for the year</p>
+<h4>Translation of SOFP</h4>
+<p>•</p>
+<p>Assets and liabilities at the closing rate</p>
+<p>•</p>
+<p>Goodwill at the closing rate</p>
+<p>Exchange gains / losses</p>
+<ul>
+<li>Exchange differences on Net Assets arise as the net assets are initially translated at</li>
+</ul>
+<p>the opening rate, the closing net assets are translated at the closing rate and net</p>
+<p>assets change (movement on net assets) is translated at average rate in OCI.</p>
+<ul>
+<li>Exchange difference on goodwill arises as the goodwill b/f is translated at the</li>
+</ul>
+<p>opening rate, the goodwill at the end of the period is translated at the closing rate</p>
+<p>and any impairments of goodwill has to translated at the average rate in SOPL.</p>
+<ul>
+<li>Sum of the above two differences is recognized within OCI. Exchange difference is</li>
+</ul>
+<p>always split between parent and NCI based on the shareholding percentage.</p>
+<ul>
+<li>Exchange difference on Goodwill may depend upon the way of measuring NCI:</li>
+</ul>
+<p>1. If NCI is measured based on the proportion of net assets, parent has to bear up</p>
+<p>the total goodwill difference.</p>
+<p>2. If NCI is measured based on fair value method, goodwill difference is split</p>
+<p>between the parent and NCI.</p></section></div></article>
+<article class="topic-card searchable" id="ias-21-effect-of-changes-in-foreign-exchange-rates" data-title="IAS 21 - Effect of Changes in Foreign Exchange Rates">
+<div class="topic-head"><div><h2>IAS 21 - Effect of Changes in Foreign Exchange Rates</h2><div class="meta">2 pages · Source: Hashans F2 theory refresh - IAS 21 - Effect of Changes in Foreign Exchange Rates.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS 21 - Effect of Changes in Foreign</h4>
+<p>Exchange Rates</p>
+<p>•</p>
+<p>Presentation Currency: The currency in which the financial statements are prepared</p>
+<p>•</p>
+<p>Functional Currency: The currency of the primary economic environment in which the entity</p>
+<p>operates. In most cases it’s the local currency.</p>
+<p>•</p>
+<p>Foreign Currency: Any currency other than the functional currency</p>
+<p>•</p>
+<p>Spot Exchange Rate: Actual exchange rate for a given day</p>
+<p>•</p>
+<p>Closing Rate: Exchange rate at the reporting date (year-end)</p>
+<p>How to determine your functional currency?</p>
+<p>1. The currency that mainly influences selling price for goods and services</p>
+<p>2. The currency of the country whose competitive forces (demand and supply) and regulations mainly</p>
+<p>determine the selling price of goods and services</p>
+<p>3. The currency that mainly influences labour, material and other costs of providing goods and services</p>
+<p>4. The currency in which funding from debt and equity is generated</p>
+<p>5. The currency in which receipts from operating activities are usually retained</p>
+<p>Initial Recognition</p>
+<p>The transaction will be initially recorded using the spot exchange rate of the date of the transaction.</p>
+<h4>Subsequent Measurement - Settled transactions</h4>
+<p>When a cash settlement occurs, the settlement value must be measured using the spot exchange rate at</p>
+<p>the date of the settlement. Any exchange gain or loss will be transferred to the statement of profit &amp;</p>
+<p>loss.</p>
+<h4>Subsequent Measurement - Unsettled transactions</h4>
+<p>Unsettled transactions are any foreign currency assets or liabilities remaining in the statement of</p>
+<p>financial position at the year end. The accounting treatment will depend whether they are classified as</p>
+<p>monetary or non-monetary.</p>
+<p>Monetary items - Currency held and assets or liabilities to be received or paid in a foreign currency.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>E.g. cash, receivables, payables, loans</p>
+<p>Accounting treatment: Translate using the closing rate. Any exchange gain or loss will be transferred to</p>
+<p>the statement of profit &amp; loss.</p>
+<p>Non-Monetary items - Other items in the statement of financial position</p>
+<p>E.g. Non-Current Assets, Inventory</p>
+<p>Accounting treatment: Do not translate.</p></section></div></article>
+<article class="topic-card searchable" id="ias-32-ifrs-9-financial-instruments" data-title="IAS 32, IFRS 9 - Financial instruments">
+<div class="topic-head"><div><h2>IAS 32, IFRS 9 - Financial instruments</h2><div class="meta">9 pages · Source: Hashans F2 theory refresh - IAS 32, IFRS 9 - Financial instruments.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<h4>IAS 32 &amp; IFRS 9 - Financial Instruments</h4>
+<p>IAS 32 deals with the classification of financial instruments and their presentation in financial</p>
+<p>statements. A financial instrument is &#x27;any contract that gives rise to a financial asset of one entity and a</p>
+<p>financial liability or equity instrument of another entity simultaneously&#x27;.</p>
+<p>As per IAS 32, &#x27;a financial asset is any asset that is cash, an equity instrument of another entity, a</p>
+<p>contractual right to receive cash or another financial asset from another entity, a contractual right to</p>
+<p>exchange financial instruments with another entity under conditions that are potentially favourable&#x27;. Ex:</p>
+<p>Investments in ordinary shares, Investments in debt instruments like debentures/loan stock/loan</p>
+<p>notes/bonds etc.</p>
+<p>A financial liability is ‘any liability that is a contractual obligation to deliver cash or another financial</p>
+<p>asset to another entity to exchange financial instruments with another entity under conditions that are</p>
+<p>potentially unfavourable&#x27;. Ex: Issue of debentures/loan stock/loan notes/bonds i.e. borrowing money</p>
+<p>from another entity, trade payables, and loans from financial institutions.</p>
+<p>An equity instrument is &#x27;any contract that evidences a residual interest in the assets of an entity after</p>
+<p>deducting all of its liabilities&#x27;. Ex: an issue of ordinary shares.</p>
+<h4>IFRS 9</h4>
+<p>IFRS 9 is a new standard and is effective for annual periods beginning on or after 1 January 2018. IFRS 9</p>
+<p>supersedes IAS 39 Financial instruments: recognition and measurement, the stipulations of which are no</p>
+<p>longer examinable.</p>
+<p>•</p>
+<p>IFRS 9 Financial instruments says that a financial instrument should be initially recognised at its fair</p>
+<p>value.</p>
+<p>•</p>
+<p>Issued equity instruments are not re-measured after initial recognition.</p>
+<p>•</p>
+<p>Subsequent measurement of other financial instruments (i.e. financial assets and financial liabilities)</p>
+<p>depends on how that particular financial instrument is classified.</p>
+<h4>Initial measurement of financial liabilities</h4>
+<p>•</p>
+<p>IFRS 9 Financial instruments says that a liability should be initially recognised at its fair value.</p>
+<p>•</p>
+<p>Directly attributable transaction costs (e.g. professional fees directly related to the issue or</p>
+<p>acquisition of a financial instrument) are capitalised unless classified as fair value through profit or</p>
+<p>loss.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>•</p>
+<p>Capitalised transaction costs are deducted from the liability. If the financial liability is classified as</p>
+<p>fair value through profit or loss, then transaction costs are expensed within the statement of profit</p>
+<p>or loss.</p>
+<h4>Subsequent measurement of financial liabilities</h4>
+<p>Subsequent measurement of financial liabilities depends upon the classification of the financial liability.</p>
+<p>There are two possible categories of financial liability.</p>
+<p>Compound Instruments</p>
+<p>A compound instrument is a financial instrument that has characteristics of both equity and liabilities.</p>
+<p>Convertible bonds are compound instruments. They are currently debt but can be converted into equity</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>shares at certain points in the future. Upon initial recognition, IAS 32 requires compound financial</p>
+<h4>instruments to be split into their component parts:</h4>
+<ul>
+<li>A financial liability (the debt) - measured as the present value of the future cash flows, including</li>
+</ul>
+<p>redemption, using a discount rate that equates to the interest rate on similar instruments without</p>
+<p>conversion rights</p>
+<ul>
+<li>An equity instrument (the option to convert into shares) - calculated as the balancing figure. These</li>
+</ul>
+<p>must be shown separately in the financial statements. Subsequently, the liability component is</p>
+<p>measured at amortised cost and the equity component remains unchanged. Any transaction costs would</p>
+<p>be pro-rated between equity and liability component based on their values.</p>
+<h4>Initial measurement of financial assets</h4>
+<p>•</p>
+<p>IFRS 9 says that a financial asset should be initially recognised at its fair value (which is typically cash</p>
+<p>paid/received).</p>
+<p>•</p>
+<p>Directly attributable transaction costs (e.g. professional fees directly related to the issue or</p>
+<p>acquisition of a financial asset) are capitalised unless the financial asset is classified as fair value</p>
+<p>through profit or loss.</p>
+<p>•</p>
+<p>Capitalised transaction costs are added to the asset. If the financial asset is classified as fair value</p>
+<p>through profit or loss, then transaction costs are expensed within the statement of profit or loss.</p>
+<h4>Subsequent measurement of financial assets</h4>
+<p>•</p>
+<h5>Subsequent measurement of financial assets depends on how the financial assets have been</h5>
+<p>classified.</p>
+<p>•</p>
+<p>Classification depends upon whether the financial asset is an equity financial asset or a debt</p>
+<p>financial asset.</p></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<h4>Subsequent measurement of investments in debt financial assets</h4>
+<h4>There are three classifications of debt financial assets:</h4>
+<p>•</p>
+<p>Amortised cost</p>
+<p>•</p>
+<p>Fair value through other comprehensive income (FVOCI)</p>
+<p>•</p>
+<p>Fair value through profit or loss.</p>
+<p>At initial recognition, an entity will designate a debt financial asset as either FVOCI or at amortised cost</p>
+<h4>dependent upon the outcome of two tests:</h4>
+<p>a) The business model test- To determine the category of debt financial asset, the business model test</p>
+<p>considers the entity’s strategies regarding investments in debt.</p>
+<p>Ex: Does the entity invest in debt financial assets with an intention to keep financial assets, to sell</p>
+<p>them to other investors or do they expect to hold some and sell some of the financial assets?</p></section>
+<section class="pdf-page"><div class="page-label">Page 5</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>b) The contractual cash flow test- The contractual cash flow test states that the contractual terms of</p>
+<h5>the debt financial asset give rise to cash flow receipts that are solely repayments of:</h5>
+<ul>
+<li>Principal (the capital element of the debt).</li>
+<li>Interest on the principal amount outstanding.</li>
+</ul></section>
+<section class="pdf-page"><div class="page-label">Page 6</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>De-recognition of Financial Assets</p>
+<p>In accordance with IFRS 9 Financial instruments, an entity should de-recognise a financial asset when:</p>
+<p>•</p>
+<p>The contractual rights to the cash flows from the financial asset expire, or</p>
+<p>•</p>
+<p>It transfers substantially all the risks and rewards of ownership of the financial asset. Upon de-</p>
+<h5>recognition, any difference between proceeds and carrying amount is recognised through profit</h5>
+<p>or loss.</p>
+<p>•</p>
+<p>For investments in debt instruments measured at fair value through other comprehensive</p>
+<p>income, the cumulative gains or losses recognised in other comprehensive income are recycled</p>
+<p>to profit or loss on disposal.</p>
+<p>•</p>
+<p>For investments in equity instruments measured at fair value through other comprehensive</p>
+<p>income, the cumulative gains or losses recognised in other comprehensive income are not</p>
+<p>recycled to profit or loss on disposal.</p>
+<p>Financial Derivatives</p>
+<p>According to IFRS 9 Financial instruments, a derivative is a financial instrument that derives its value</p>
+<p>from the value of an underlying asset, price, rate or index.</p>
+<ul>
+<li>Underlying items include equities, bonds, commodities, interest rates, exchange rates and stock</li>
+</ul>
+<p>market and other indices.</p>
+<ul>
+<li>Derivative financial instruments include futures, options, forward contracts, interest rate and currency</li>
+</ul>
+<p>swaps.</p>
+<p>Characteristics of a derivative</p>
+<h4>A derivative has all of the following characteristics:</h4>
+<ul>
+<li>Its value changes in response to changes in the underlying item</li>
+<li>It requires little or no initial investment</li>
+<li>It is settled at a future date.</li>
+</ul>
+<h4>Recognition and measurement</h4>
+<p>All derivatives are accounted as fair value through profit or loss (FVPL). A derivatives gains (or losses)</p>
+<p>fluctuate as the underlying item&#x27;s price moves. On the date of initial recognition, no price movements</p>
+<p>would have occurred so fair value is typically nil (as long as there is no cost of entering the derivative). At</p>
+<p>each reporting date, the derivative is restated to fair value and recorded as a financial asset or financial</p></section>
+<section class="pdf-page"><div class="page-label">Page 7</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>liability on the statement of financial position. Any gains/losses are taken to the statement of profit or</p>
+<p>loss.</p>
+<p>Types of derivative</p>
+<ul>
+<li>Forward - the obligation to buy or sell a defined amount of a specific underlying asset, at a specified</li>
+</ul>
+<p>price at a specified future date.</p>
+<ul>
+<li>Forward rate agreements - a contract to fix the interest charge on a floating rate loan. • Futures</li>
+</ul>
+<p>contracts - the obligation to buy or sell a standard quantity of a specific underlying item at a specified</p>
+<p>future date.</p>
+<ul>
+<li>Swaps - an agreement to exchange periodic payments at specified intervals over a specified time</li>
+</ul>
+<p>period.</p>
+<ul>
+<li>Options - the right, but not the obligation, to buy or sell a specific underlying asset, at a specified</li>
+</ul>
+<p>price, on or before a specified future date.</p></section>
+<section class="pdf-page"><div class="page-label">Page 8</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>Chapter Summary</p></section>
+<section class="pdf-page"><div class="page-label">Page 9</div><p>Hashan Bellanthuda</p>
+<p>F2</p></section></div></article>
+<article class="topic-card searchable" id="ifrs-15-revenue-from-contracts-with-customers" data-title="IFRS 15 - Revenue from contracts with customers">
+<div class="topic-head"><div><h2>IFRS 15 - Revenue from contracts with customers</h2><div class="meta">7 pages · Source: Hashans F2 theory refresh - IFRS 15 - Revenue from contracts with customers.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<h4>IFRS 15- Revenue from contracts with</h4>
+<p>customers</p>
+<p>IFRS 15 defines revenue as ‘Income arising in the course of an entity’s ordinary activities. Revenue does</p>
+<h4>not include:</h4>
+<ul>
+<li>Proceeds from sale of non-current assets</li>
+<li>Sales tax and other similar taxes</li>
+<li>Other amounts collected on behalf of others. For example, in an agency relationship, the agent would</li>
+</ul>
+<p>only recognise commission.</p>
+<h5>The five step process to revenue recognition can be fulfilled through the acronym (COPAR):</h5>
+<ul>
+<li>Contract</li>
+<li>Obligations</li>
+<li>Price</li>
+<li>Allocate price</li>
+<li>Recognise revenue.</li>
+</ul>
+<h4>Step 1 (CONTRACT) -Identify the contract</h4>
+<p>IFRS 15 Revenue from contracts with customers says that a contract is an agreement between two or</p>
+<p>more parties that creates rights and obligations. A contract does not need to be written. An entity can</p>
+<h5>only account for revenue if the contract meets the following criteria:</h5>
+<ul>
+<li>The parties to the contract have approved and are committed to fulfilling the contract</li>
+<li>Each party’s rights can be identified</li>
+<li>The payment terms can be identified</li>
+<li>The contract has commercial substance, and</li>
+<li>It is probable that the entity will be paid.</li>
+</ul>
+<h5>Step 2: (OBLIGATIONS)-Identifying the separate performance obligations within a contract</h5></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>Performance obligations are promises to transfer distinct goods or services to a customer. Some</p>
+<h5>contracts contain more than one performance obligation. For example:</h5>
+<ul>
+<li>An entity may enter into a contract with a customer to sell a car, which includes one year’s free</li>
+</ul>
+<p>servicing and maintenance</p>
+<ul>
+<li>An entity might enter into a contract with a customer to provide a course of 5 lectures, as well as to</li>
+</ul>
+<p>provide a textbook on the first day of the course.</p>
+<p>The distinct performance obligations within a contract must be identified. An entity must decide if the</p>
+<h4>nature of a performance obligation is:</h4>
+<ul>
+<li>To provide the specified goods or services itself (i.e. it is the principal), or</li>
+<li>To arrange for another party to provide the goods or service (i.e. it is an agent).</li>
+</ul>
+<p>If an entity is an agent, then revenue is recognised based on the fee or commission to which it is</p>
+<p>entitled.</p>
+<h4>Step 3 (PRICE): Determining the transaction price</h4>
+<p>In accordance to IFRS 15 Revenue from contracts with customers, the transaction price is the amount of</p>
+<p>consideration an entity expects in exchange for satisfying a performance obligation. When determining</p>
+<h4>the transaction price, the following must be considered:</h4>
+<p>a) Variable consideration - If a contract includes variable consideration (for example, a bonus</p>
+<p>based on delivery of the contract), it shall be included within ‘the transaction price if it is highly</p>
+<p>probable that a significant reversal in the amount of cumulative revenue will not occur when the</p>
+<p>uncertainty is resolved’.</p>
+<p>b) Significant financing components- Financing In determining the transaction price, an entity must</p>
+<p>consider if the timing of payments provides the customer or the entity with a significant</p>
+<h5>financing benefit. The existence of a financing element to the sale can be indicated by:</h5>
+<ul>
+<li>A difference between the amount paid and the cash selling price</li>
+<li>An extended time period between the transfer of the goods or service and the payment date.</li>
+</ul>
+<p>If there is a significant financing component, then the consideration receivable needs to be</p>
+<p>discounted to present value using the rate at which the customer would borrow.</p>
+<p>c) Non-cash consideration- Customers do not always pay using cash or credit. The customer may</p>
+<p>pay using shares in their entity, share options or using other assets. Any non-cash consideration</p>
+<p>should be valued at fair value.</p>
+<p>d) Consideration payable to a customer- Sometimes amounts are paid to customers as part of the</p>
+<p>contract. These payments are often an incentive to encourage completion of the sale. If</p>
+<p>consideration is paid to a customer in exchange for a distinct good or service, then it is</p>
+<p>essentially a purchase transaction and should be accounted for in the same way as other</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>purchases from suppliers. For example, suppliers may sell their produce to supermarkets but</p>
+<p>may also have to pay the supermarket for shelf space. If the consideration paid to a customer is</p>
+<p>not in exchange for a distinct good or service, an entity should account for it as a reduction of</p>
+<p>the transaction price. For example, a car manufacturer sells their newest model electric cars to</p>
+<p>car dealerships but has to pay the dealer to install chargers at the dealer’s premises.</p>
+<p>Step 4: Allocate the transaction price -The total transaction price should be allocated to each</p>
+<p>performance obligation in proportion to stand-alone selling prices. The best evidence of a stand-alone</p>
+<p>selling price is the observable selling price of a good or service sold separately. If a stand-alone selling</p>
+<p>price is not directly observable, then the entity estimates the stand-alone selling price.</p>
+<p>In relation to a bundled sale, any discount should generally be allocated across each component in the</p>
+<p>transaction. The entire discount should only be allocated to a specific individual component of the</p>
+<p>transaction if that component is regularly sold separately at a discount.</p>
+<h4>Step 5: Recognise revenue</h4>
+<p>Revenue is recognised &#x27;when (or as) the entity satisfies a performance obligation by transferring a</p>
+<p>promised good or service to a customer.’ At the start of a contract, for each performance obligation</p>
+<h5>identified, an entity must determine whether it satisfies the performance obligation:</h5>
+<p>•</p>
+<p>At a point in time- The performance obligation is satisfied at a point in time when a</p>
+<p>customer obtains control of a promised asset. Control of an asset refers to the ability to</p>
+<p>direct the use of, and obtain substantially all of, the remaining benefits from the asset.</p>
+<p>Control includes the ability to prevent other entities from obtaining benefits from an</p>
+<p>asset i.e. an entity can restrict the assets use. The following are indicators of the transfer</p>
+<h4>of control:</h4>
+<ul>
+<li>‘The entity has a present right to payment for the asset</li>
+<li>The customer has legal title to the asset</li>
+<li>The entity has transferred physical possession of the asset</li>
+<li>The customer has the significant risks and rewards of ownership of the asset</li>
+<li>The customer has accepted the asset.’</li>
+</ul>
+<p>•</p>
+<p>Over time</p>
+<h4>Consignment inventory</h4>
+<h4>Consignment inventory is inventory which:</h4>
+<ul>
+<li>is legally owned by one party</li>
+<li>is held by another party, on terms which give the holder the right to sell the inventory in the normal</li>
+</ul>
+<p>course of business or, at the holder’s option, to return it to the legal owner.</p></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<h4>Inventory is legally owned by the manufacturer until:</h4>
+<ul>
+<li>the dealer sells inventory onto a third party, or</li>
+<li>the dealer’s right to return expires and the inventory is still not sold.</li>
+</ul>
+<p>However, the inventory is physically held by the dealer.</p>
+<p>Revenue should only be recorded if control of the asset sold transfers to the third party customer.</p>
+<p>Consignment inventory meets most of the conditions described above for recording revenue at a point</p>
+<p>in time. However, particular attention should be paid to the need for the customer to hold the risks and</p>
+<p>rewards of ownership.</p></section>
+<section class="pdf-page"><div class="page-label">Page 5</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>Sale and repurchase agreements</p>
+<p>A sale and repurchase agreement is where an entity sells an asset but retains a right to repurchase the</p>
+<p>asset at some point in the future.</p>
+<p>Sale and repurchase agreements are common in property developments and in maturing inventories</p>
+<p>such as whisky or cheese. The asset has been ‘legally’ sold, but there is either a commitment or an</p>
+<p>option to repurchase the asset at a later date.</p>
+<p>The point in time at which to recognise revenue depends upon whether the control has transferred to</p>
+<p>the customer.</p>
+<h5>Factors to consider when determining who has control of the asset:</h5>
+<ul>
+<li>Has the entity transferred the risks and benefits of the asset? e.g. can the entity still use the asset?</li>
+</ul>
+<p>Does the entity bear costs associated with the asset?</p>
+<ul>
+<li>Was the asset &quot;sold&quot; at a price different to market value?</li>
+<li>Is the entity obliged to repurchase the asset?</li>
+<li>If the entity has the option to repurchase the asset are they likely to exercise this option?</li>
+<li>Is the sale is to a bank or financing company?</li>
+<li>Is repurchase at a fixed price or market value?</li>
+</ul>
+<p>Accounting for revenue recorded over time</p>
+<p>&#x27;For each performance obligation satisfied over time, an entity shall recognise revenue over time by</p>
+<p>measuring the progress towards complete satisfaction of that performance obligation&#x27; (IFRS 15, para</p>
+<h4>39). Methods of measuring progress include:</h4>
+<ul>
+<li>Output methods (such as surveys of performance or time elapsed as a proportion of total contract</li>
+</ul>
+<p>price/time)</p></section>
+<section class="pdf-page"><div class="page-label">Page 6</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<ul>
+<li>Input methods (such as costs incurred to date as a proportion of total expected costs). As a result,</li>
+</ul>
+<p>revenue will be recognised based on the amount of progress made compared to the total price.</p>
+<p>Contract costs</p>
+<h4>IFRS 15 says that the following costs must be capitalised:</h4>
+<ul>
+<li>The incremental costs of obtaining a contract</li>
+<li>The costs of fulfilling a contract if they do not fall within the scope of another standard (such as IAS 2</li>
+</ul>
+<p>Inventories) and the entity expects them to be recovered.</p>
+<p>The capitalised costs will be amortised as revenue is recognised. This means that they will be expensed</p>
+<p>to cost of sales as the contract progresses. These will be matched to revenue based on either the input</p>
+<p>or output method of measuring progress. Cost of sales will be measured as % progress made × total</p>
+<p>costs.</p>
+<h5>Step 1 - Calculate overall profit or loss (if loss, recognize immediately)</h5>
+<h5>Step 2 - Determine the progress towards completion (cost base/work certified base)</h5>
+<h5>Step 3 - Determine figures for inclusion in the statement of profit or loss</h5>
+<h5>Step 4 - Determine figures for inclusion in the statement of financial position.</h5></section>
+<section class="pdf-page"><div class="page-label">Page 7</div><p>Hashan Bellanthuda</p>
+<p>F2</p></section></div></article>
+<article class="topic-card searchable" id="ifrs-16-leases" data-title="IFRS 16 - Leases">
+<div class="topic-head"><div><h2>IFRS 16 - Leases</h2><div class="meta">4 pages · Source: Hashans F2 theory refresh - IFRS 16 - Leases.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<h4>IFRS 16- Leases</h4>
+<p>An entity may need a particular asset for its operations but may not have the cash available to purchase</p>
+<p>the asset outright. As a result, the entity may enter a lease agreement whereby the entity gets to use</p>
+<p>the asset on a day to day basis but pays for the asset via periodic rental payments.</p>
+<p>Lessee accounting</p>
+<p>The lessee is the entity using the asset on a day-to-day basis. It has the right-of-use of the asset. The</p>
+<p>lessee will be paying rentals.</p>
+<p>Basic principle</p>
+<h4>At the commencement of the lease, the lessee should recognise:</h4>
+<ul>
+<li>A lease liability, and</li>
+<li>A right-of-use asset. As ever, the accounting treatment considers the initial measurement and the</li>
+</ul>
+<p>subsequent treatment of a lease.</p>
+<h4>Initial measurement</h4>
+<p>Lease liability</p>
+<p>Per IFRS 16 Leases, the lease liability is initially measured at the present value of the lease payments that</p>
+<p>have not yet been paid.</p>
+<h4>Lease payments should include the following:</h4>
+<ul>
+<li>Fixed payments over the lease term.</li>
+<li>Amounts expected to be payable under residual value guarantees. A residual value guarantee is</li>
+</ul>
+<p>provided by the lessee and states that the underlying asset at the end of the lease term will not be</p>
+<p>worth less than a specified amount. This reduces the risk of damage and unauthorized usage of the</p>
+<p>asset.</p>
+<ul>
+<li>Options to purchase the asset that are reasonably certain to be exercised.</li>
+<li>Termination penalties, if the lease term reflects the expectation that these will be incurred.</li>
+</ul>
+<p>The discount rate should be the rate implicit in the lease. If the implicit rate of the lease cannot be</p>
+<p>determined, then the entity should use its incremental borrowing rate (the rate at which it could borrow</p>
+<p>funds to purchase a similar asset).</p>
+<p>The right-of-use asset</p>
+<p>The right-of-use asset is initially recognised at cost.</p>
+<h5>Per IFRS 16 Leases, the initial cost of the right-of-use asset comprises:</h5></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<ul>
+<li>The amount of the initial measurement of the lease liability (see above)</li>
+<li>Lease payments made at or before the commencement date</li>
+<li>Any initial direct costs</li>
+<li>The estimated costs of removing or dismantling the underlying asset, as per the conditions of the</li>
+</ul>
+<p>lease.</p>
+<p>The lease term</p>
+<p>The lease term is the length of time that the lessee has the right-of-use of an asset. To calculate the</p>
+<p>initial value of the liability and right-of-use asset, the lessee must consider the length of the lease term.</p>
+<h4>As per IFRS 16 Leases, the lease term comprises:</h4>
+<ul>
+<li>Non-cancellable periods</li>
+<li>Periods covered by an option to extend the lease, if they are reasonably certain to be exercised</li>
+<li>Periods covered by an option to terminate the lease, if these are reasonably certain not to be</li>
+</ul>
+<p>exercised.</p>
+<h4>Subsequent measurement</h4>
+<p>Lease liability</p>
+<p>The carrying amount of the lease liability is increased by the interest charge. Interest is also recorded in</p>
+<h4>the statement of profit or loss:</h4>
+<p>•</p>
+<div class="journal">Dr Finance costs (SPL) X</div>
+<p>•</p>
+<div class="journal">Cr Lease liability (SFP) X</div>
+<h5>The carrying amount of the lease liability is reduced by cash repayments:</h5>
+<p>•</p>
+<div class="journal">Dr Lease liability X</div>
+<p>•</p>
+<div class="journal">Cr Cash X</div>
+<p>The treatment of the lease liability is in line with the treatment of financial liabilities measured at</p>
+<p>amortised cost as per IFRS 9 Financial instruments. The layout of the lease table will depend on whether</p>
+<p>payments are made at the end of the year (in arrears) or at the start of the year (in advance).</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<p>Short-life and low value assets</p>
+<p>If the lease is short-term (less than 12 months at the inception date) or of a low value then a simplified</p>
+<p>treatment is allowed. In these cases, the lessee can choose to recognise the lease payments in profit or</p>
+<p>loss on a straight line basis. No lease liability or right-of-use asset would be recognised.</p>
+<h5>IFRS 16 Leases does not specify a particular monetary amount below which an asset would be</h5>
+<p>considered ‘low value’.</p>
+<h4>The standard gives the following examples of low value assets:</h4>
+<ul>
+<li>Tablets</li>
+<li>Small personal computers</li>
+<li>Telephones</li>
+<li>Small items of furniture.</li>
+</ul>
+<p>The assessment of whether an asset qualifies as having a ‘low value’ must be made based on its value</p>
+<p>when new. Therefore, a car would not qualify as a low value asset, even if it was very old at the</p>
+<p>commencement of the lease.</p>
+<p>Lessor accounting</p>
+<p>The lessor is the &#x27;entity that provides the right to use an underlying asset in exchange for consideration.&#x27;</p>
+<p>The lessor provides the asset to the lessee and receives payments. A lessor must classify its leases as</p>
+<p>finance or operating leases.</p>
+<p>Indications of a finance lease</p>
+<p>To determine whether a lease is a finance or operating lease, the substance of the lease agreement</p>
+<p>should be considered. According to IFRS 16 Leases, a lease is probably a finance lease if one or more of</p>
+<h4>the following apply:</h4></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><p>Hashan Bellanthuda</p>
+<p>F2</p>
+<ul>
+<li>Ownership is transferred to the lessee at the end of the lease.</li>
+<li>The lessee has the option to purchase the asset for a price substantially below the fair value of the</li>
+</ul>
+<p>asset and it is reasonably certain the option will be exercised.</p>
+<ul>
+<li>The lease term is for the major part of the asset&#x27;s useful life.</li>
+<li>The present value of the minimum lease payments amounts to substantially all of the fair value of the</li>
+</ul>
+<p>asset.</p>
+<ul>
+<li>The leased assets are of such a specialised nature that only the lessee can use them without major</li>
+</ul>
+<p>modification.</p>
+<ul>
+<li>The lessee bears losses arising from cancelling the lease.</li>
+<li>Lessee has ability to continue the lease for a secondary period at a rate below market rent.</li>
+</ul>
+<p>Accounting treatment for an operating lease</p>
+<ul>
+<li>Lease receipts are shown as income in the statement of profit or loss on a straight line basis over the</li>
+</ul>
+<p>term of the lease, unless another systematic basis is more appropriate.</p>
+<ul>
+<li>Any difference between amounts charged and amounts paid will be recognised as prepayments or</li>
+</ul>
+<p>accruals in the statement of financial position.</p>
+<p>Accounting treatment for a finance lease</p>
+<p>At the inception of a lease, lessors present assets held under a finance lease as a receivable.</p>
+<p>The finance lease receivable is equal to the net investment of the lease.</p>
+<h4>This is calculated as the present value of:</h4>
+<ul>
+<li>Fixed payments</li>
+<li>Residual value guarantees (amounts the lessee guarantees that the leased asset will be worth at the</li>
+</ul>
+<p>end of the lease)</p>
+<ul>
+<li>Unguaranteed residual values</li>
+<li>Termination penalties.</li>
+</ul>
+<p>The payments are discounted at the rate implicit in the lease.</p>
+<h4>The carrying amount of the lease receivable is:</h4>
+<ul>
+<li>increased by the finance income earned</li>
+<li>decreased by the cash receipts.</li>
+</ul></section></div></article>
+<article class="topic-card searchable" id="ias-24-related-party" data-title="IAS 24- Related party">
+<div class="topic-head"><div><h2>IAS 24- Related party</h2><div class="meta">2 pages · Source: IAS 24- Related party .pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS 24 - Related Party Disclosures</h4>
+<p>Related Party</p>
+<p>A person or entity that is related to the entity that is preparing its financial statements. A relationship</p>
+<p>exists. Only if control, joint control, common control or significant influence exists between the party</p>
+<p>and the reporting entity.</p>
+<p>•</p>
+<p>Ex:) Key Management personnel, Close family members of key management personnel,</p>
+<p>Entities that are members of the same group</p>
+<h4>Below stated relationships are not recorded as per IAS 24:</h4>
+<p>-</p>
+<p>Providers of finance</p>
+<p>-</p>
+<p>Public utilities</p>
+<p>-</p>
+<p>Trade unions</p>
+<p>-</p>
+<p>Key customers and suppliers</p>
+<p>-</p>
+<p>Two joint venturers simply because they share joint control of a joint venture</p>
+<p>-</p>
+<p>Two entities simply because they have a director/member of key management personnel in</p>
+<p>common</p>
+<p>Key management personnel</p>
+<p>Those persons having authority and responsibility for planning, directing and controlling the activities</p>
+<p>of the entity, directly or indirectly, including any director (whether executive or otherwise) of that</p>
+<p>entity.</p>
+<p>Close family members</p>
+<p>Close members of the family of a person are those family members who may be expected to influence,</p>
+<p>or be influenced by, that person in their dealings with the entity. They would include children, spouse,</p>
+<p>other dependents of domestic partner.</p>
+<p>Need for disclosure of related parties</p>
+<p>Users need to be aware of related party relationships. i.e., users need to know which transactions</p>
+<p>have not been made at arm’s length.</p>
+<p>Disclosures of related parties</p>
+<p>•</p>
+<p>Parent/Subsidiary relationships</p>
+<p>•</p>
+<p>Disclosure of transactions and balances</p>
+<p>•</p>
+<p>Key management compensation</p>
+<p>Related party transaction</p>
+<p>A related party transaction is &#x27;a transfer of resources, services or obligations between a reporting</p>
+<p>entity and a related party, regardless of whether a price is charged.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Disclosure requirements</p>
+<p>Only if the transaction is a related party transaction, disclosures are required as per IAS 24.</p>
+<p>•</p>
+<p>The nature of the related party relationship</p>
+<p>•</p>
+<p>The nature of the transaction</p>
+<p>•</p>
+<p>The amount of the transaction</p>
+<p>•</p>
+<p>Any outstanding balance relating to the transaction</p>
+<p>•</p>
+<p>Any provisions for doubtful debts remaining to the amount of any outstanding balance</p></section></div></article>
+<article class="topic-card searchable" id="ias-33-eps" data-title="IAS 33-EPS">
+<div class="topic-head"><div><h2>IAS 33-EPS</h2><div class="meta">2 pages · Source: IAS 33-EPS.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS 33 - Earnings Per Share</h4>
+<p>•</p>
+<p>EPS is an important indication of company’s performance.</p>
+<div class="formula">EPS =</div>
+<p>𝐸𝑎𝑟𝑛𝑖𝑛𝑔𝑠</p>
+<p>𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑠ℎ𝑎𝑟𝑒𝑠</p>
+<ul>
+<li>Earnings: Net Profit attributed to the equity shareholders (Including the irredeemable preference share</li>
+</ul>
+<p>dividends)</p>
+<ul>
+<li>Number of shares: Weighted average number of ordinary shares on a time weighted basis.</li>
+</ul>
+<p>•</p>
+<p>If shares are issued in the middle of a financial period, then only the earnings after the issued date</p>
+<p>are used to calculate EPS.</p>
+<h4>Bonus Issue</h4>
+<p>Issue shares to the current shareholders based on the current stake of each shareholder. No cash is raised</p>
+<p>to the entity and the percentage stake of the shareholders won’t affect too.</p>
+<div class="formula">EPS =</div>
+<p>𝐸𝑎𝑟𝑛𝑖𝑛𝑔𝑠</p>
+<p>𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑠ℎ𝑎𝑟𝑒𝑠 𝑏𝑒𝑓𝑜𝑟𝑒 𝑏𝑜𝑛𝑢𝑠 𝑖𝑠𝑠𝑢𝑒 ∗ 𝑏𝑜𝑛𝑢𝑠 𝑓𝑟𝑎𝑐𝑡𝑖𝑜𝑛</p>
+<div class="formula">Bonus fraction=</div>
+<p>𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑠ℎ𝑎𝑟𝑒𝑠 𝑎𝑓𝑡𝑒𝑟 𝑏𝑜𝑛𝑢𝑠 𝑖𝑠𝑠𝑢𝑒</p>
+<p>𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑠ℎ𝑎𝑟𝑒𝑠 𝑏𝑒𝑓𝑜𝑟𝑒 𝑏𝑜𝑛𝑢𝑠 𝑖𝑠𝑠𝑢𝑒</p>
+<h4>Rights Issue</h4>
+<p>Issue of shares at a discounted price to the current shareholders in proportion to their current stake. It</p>
+<p>raises funds for the entity and the stakeholder ownership may dilute if not subscribed. Since the number</p>
+<p>of shares in issue increases, EPS would get reduced if Earnings kept same as it was. Thus, EPS figure can be</p>
+<p>misleading in those scenarios.</p>
+<p>Convertible Debt</p>
+<p>Conversion of bonds/preference shares would save the interest cost and increase the net earnings even</p>
+<p>after the tax deduction. However, number of shares in issue would increase as the debt element is</p>
+<p>converted to equity. Depending upon the figures EPS and increase or decrease.</p>
+<p>Options and Warrants to subscribe for shares</p>
+<p>An option or warrant allows the holder the right (not the obligation) to buy shares at some time in the</p>
+<p>future at a predetermined price. Cash value raised with options would be less than the market. Price of the</p>
+<p>shares as the option will only be exercised if the exercised price is less than the market price. The increase</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>in resources does not match the increase there would be in resources if the issue of shares were at market</p>
+<p>value. Thus, it dilutes EPS.</p></section></div></article>
+<article class="topic-card searchable" id="ias-37-provisions" data-title="IAS 37-Provisions">
+<div class="topic-head"><div><h2>IAS 37-Provisions</h2><div class="meta">6 pages · Source: IAS 37-Provisions.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h5>IAS 37 - Provisions, Contingent Liabilities and Contingent Assets</h5>
+<p>Provision</p>
+<p>A liability of uncertain timing or amount</p>
+<p>Liability</p>
+<p>A present obligation of the entity arising from past events, the settlement of which is expected to</p>
+<p>result in an outflow from the entity of resources embodying economic benefits.</p>
+<h4>Recognition of Provisions</h4>
+<h4>Criterion to be satisfied:</h4>
+<p>-</p>
+<p>Having a present obligation as a result of a past transaction,</p>
+<p>-</p>
+<p>Probable of an outflow of economic resources to settle the obligation &amp;</p>
+<p>-</p>
+<p>Reliable estimate can be made of the amount of the obligation.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Future Operating Losses</p>
+<p>Since future operating losses are not liabilities, they can’t be recognized as a provision.</p>
+<p>Onerous contracts</p>
+<p>A contract in which the unavoidable costs of meeting the obligations under the contract exceed the</p>
+<p>economic benefits expected to be received under it.</p>
+<p>Lower of</p>
+<h4>Cost of fulfilling the contract</h4>
+<p>Any compensation / penalties</p>
+<p>payable for failing to fulfill it.</p>
+<p>Recorded as per</p>
+<h4>IAS 37</h4></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><h4>Restructuring</h4>
+<p>A restructuring programme planned and controlled by management that materially changes the scope</p>
+<p>of business undertaken or the manner in which that business is conducted.</p>
+<h4>Provision can only be made:</h4>
+<p>•</p>
+<p>If the entity has a formal plan &amp;</p>
+<p>•</p>
+<p>Has raised a valid expectation in those affected by the restructuring (Employees and other</p>
+<p>stakeholders).</p>
+<p>Can record only the relevant costs associated with the restructuring.</p>
+<h4>Contingent Liabilities</h4>
+<p>•</p>
+<p>A possible obligation that arises from past events and whose existence will be confirmed only</p>
+<p>by the occurrence or non- occurrence of one or more uncertain future events not wholly</p>
+<p>within the control of the entity, or</p></section>
+<section class="pdf-page"><div class="page-label">Page 4</div><p>•</p>
+<p>A present obligation that arises from past events but is not recognised because it is not</p>
+<p>probable of an outflow of economic resources to settle the obligation or the amount can’t be</p>
+<p>reliably measured.</p>
+<h5>Recognition: Disclosed as a note, unless the possibility of outflow is remote.</h5>
+<h4>Contingent Assets</h4>
+<p>•</p>
+<p>A possible asset that arises from past events and whose existence will be confirmed only by</p>
+<p>the occurrence or non-occurrence of one or more uncertain future events not wholly within</p>
+<p>the control of the entity.</p>
+<h5>Recognition: Disclosed as a note, if the inflow is highly probable.</h5>
+<h4>Disclosures for contingent liabilities and assets:</h4>
+<p>•</p>
+<p>Description of nature of contingent liability/asset</p>
+<p>•</p>
+<p>An estimate of its financial effect</p>
+<p>•</p>
+<p>An indication of uncertainties relating to amount or timing of outflow/inflow</p>
+<p>•</p>
+<p>For contingent liabilities, the possibility of any reimbursement.</p>
+<h4>Summary of the accounting treatment:</h4></section>
+<section class="pdf-page"><div class="page-label">Page 5</div></section>
+<section class="pdf-page"><div class="page-label">Page 6</div></section></div></article>
+<article class="topic-card searchable" id="ias-38-intangible-assets" data-title="IAS 38- Intangible Assets">
+<div class="topic-head"><div><h2>IAS 38- Intangible Assets</h2><div class="meta">3 pages · Source: IAS 38- Intangible Assets.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS 38 - Intangible Assets</h4>
+<p>Intangible Asset</p>
+<p>An identifiable non-monetary asset without physical substance. Ex:) Trademarks, Logos, Brand names.</p>
+<p>Goodwill arise on acquisition of another entity is not accounted as an intangible asset as per IAS 38</p>
+<p>since it’s not separable from the business. An asset is identifiable only if its separable and arrives from</p>
+<p>contractual or legal rights.</p>
+<h4>Recognition Criteria</h4>
+<h4>Subsequent Measurement</h4>
+<p>Can use either the cost model or the revaluation model to record the intangible assets.</p>
+<p>Cost Model</p>
+<p>•</p>
+<p>Recorded at cost less amortization any impairment losses.</p>
+<p>•</p>
+<p>Amortization is normally carried out by straight-line method for the intangibles with finite</p>
+<p>useful life and a zero-residual value.</p>
+<p>•</p>
+<p>If the intangible is with indefinite useful life, no amortizations are carried out. Impairment</p>
+<p>tests are carried out if there’s any indication.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><h5>Useful life of the intangible assets take account of the following:</h5>
+<p>-</p>
+<p>Expected usage of the asset</p>
+<p>-</p>
+<p>Possible obsolescence and expected. Actions by competitors</p>
+<p>-</p>
+<p>Stability of the industry</p>
+<p>-</p>
+<p>Market demand for the products and services that the asset is generating.</p>
+<p>Revaluation Model</p>
+<p>Intangibles have to be revalued to their fair value. The fair value is determined by an active market</p>
+<h4>and the active market should meet the following conditions:</h4>
+<p>•</p>
+<p>Items traded in the market are homogenous</p>
+<p>•</p>
+<p>Willing buyers and sellers can be found at any time</p>
+<p>•</p>
+<p>Prices are available to the public.</p>
+<h4>Derecognition of intangible assets</h4>
+<p>An Intangible asset is derecognized on disposal or when no future economic benefits are expected</p>
+<p>from it. Any gain or loss on disposal of the intangibles are recorded in SOPL.</p>
+<h4>Research &amp; Development</h4>
+<p>-</p>
+<h5>Development expenditure should be amortised over its useful life once the commercial</h5>
+<p>production begins.</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div></section></div></article>
+<article class="topic-card searchable" id="ias12-income-taxes" data-title="IAS12- Income taxes">
+<div class="topic-head"><div><h2>IAS12- Income taxes</h2><div class="meta">2 pages · Source: IAS12- Income taxes.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>IAS12 - Income Taxes</h4></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Income Tax Expenses</p>
+<h4>Income tax expenses in SOPL covers 3 elements:</h4>
+<p>1. Current tax expense for the year</p>
+<p>Estimated amount of tax payable on the taxable profits of the entity for the financial year.</p>
+<div class="journal">Dr Income tax expense (SPL)</div>
+<div class="journal">Cr Income tax liability (SFP - current liability)</div>
+<p>2. Under / Over provisions</p>
+<p>Income taxes for period are paid in the next financial year. The difference between the amount</p>
+<p>accrued (in the previous year) and the amount settled (in the current year) is recorded in the current</p>
+<p>year&#x27;s income tax expense as an under or over provision relating to the prior period.</p>
+<p>•</p>
+<div class="formula">Under provision = Amount settled &gt; Amount previously recognized (Increases the tax</div>
+<p>expense)</p>
+<p>•</p>
+<div class="formula">Over provision = Amount settled &lt; Amount previously recognized (Reduces the tax expense)</div>
+<p>3. Deferred Tax</p>
+<p>Deferred tax includes the estimated future tax consequences of transactions and events recognised</p>
+<p>in the financial statements of the current and previous periods. (This doesn’t reflect the amount</p>
+<p>payable to tax authorities).</p>
+<p>There’s a difference in between the accounting profit and the taxable profit due to the timing</p>
+<p>difference. There can be either temporary differences or permanent differences.</p>
+<p>Temporary differences are differences between the carrying amount of an asset or liability in the</p>
+<p>statement of financial position and its tax base</p>
+<p>Accounting for Deferred taxes</p>
+<p>1. Calculate the temporary difference at the year end.</p>
+<div class="formula">2. Deferred tax balance = Temporary difference * tax rate</div>
+<div class="formula">3. Deferred tax expense = Increase in deferred tax balance in the year.</div>
+<p>Deferred tax for losses</p>
+<p>A deferred tax asset is recognised on unutilised losses carried forward (as there will be a future tax</p>
+<p>benefit when the losses are offset against future profits). But the assets can be recognized only if it is</p>
+<p>probable that the future tax profits will be available against which the losses can be utilized.</p>
+<p>Impact on Other Comprehensive Income statement</p>
+<p>Any deferred tax charge/credit that relates to an item that has been recognised in other</p>
+<p>comprehensive income should also be recognised in other comprehensive income.</p></section></div></article>
+<article class="topic-card searchable" id="integrated-reporting" data-title="Integrated Reporting">
+<div class="topic-head"><div><h2>Integrated Reporting</h2><div class="meta">2 pages · Source: Integrated Reporting.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>Integrated Reporting</h4>
+<h5>Integrated Reporting aims to communicate how an entity will create value over time and</h5>
+<p>identify the key drivers of its value. To do this requires relevant financial and non-financial</p>
+<p>information.</p>
+<p>Non-financial reporting provides an idea of how the business is managed, its future</p>
+<p>prospects, the entity’s policy on the environment, Its attitude towards social. Responsibility,</p>
+<p>etc.</p>
+<h4>Objectives for integrated reporting</h4>
+<ul>
+<li>Improve the quality of information available to providers of financial capital</li>
+<li>Provide more cohesive and efficient approach to corporate reporting</li>
+<li>Enhance the accountability and stewardship for the broad base of capitals</li>
+<li>Support integrated thinking and decision making.</li>
+</ul>
+<h4>Categories of capital</h4>
+<p>1. Financial capital: Obtained through financing via debt, equity, grants, etc.</p>
+<p>2. Manufactured capital: Manufactured physical objects that are utilized in the</p>
+<p>production of goods or services. Ex:) Buildings, Machinery, water utilities, etc.</p>
+<p>3. Intellectual capital: Intellectual property such as patents, copyrights, softwares,</p>
+<p>rights, organization procedures and protocols.</p>
+<p>4. Human capital: Competencies, capabilities and experience, motivation of the</p>
+<p>employees. Enhancing of human capital through education and trainings is critical to</p>
+<p>an organizations’ future.</p>
+<p>5. Social and Relationship capital: Institutions and the relationships within and</p>
+<p>between communities, groups of stakeholders and other networks, and the ability to</p>
+<p>share information to enhance individual and collective well-being. Ex:) Intangibles</p>
+<p>associated with brands, shared norms, relationships with stakeholders, etc.</p>
+<p>6. Natural capital: All environmental resources and processes that support the</p>
+<p>organization. Ex:) Biodiversity, land, forests, climate, carbon emissions, etc.</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Key components of integrated report</p>
+<p>•</p>
+<p>Business model</p>
+<p>•</p>
+<p>Risks and opportunities and how they are dealing with them and how they affect the</p>
+<p>company&#x27;s ability to create value.</p>
+<p>•</p>
+<p>Governance structure and how this supports its ability to create value.</p>
+<p>•</p>
+<p>Strategy and resource allocation.</p>
+<p>•</p>
+<p>Basis of preparation and presentation</p>
+<p>•</p>
+<p>Performance and achievement of strategic objectives for the period and outcomes.</p>
+<h4>Benefits and limitations of Integrated reporting</h4>
+<h4>Benefits</h4>
+<h4>Limitations</h4>
+<p>Improved transparency and improved</p>
+<p>reputation</p>
+<p>Reluctance to disclose information for fear</p>
+<p>of losing competitive advantages</p>
+<p>Integrated thinking may lead to improved</p>
+<p>efficiencies within organization</p>
+<p>Providing too much information for the</p>
+<p>users and not easy to digest</p>
+<p>Increases the understanding with new</p>
+<p>information which are not being disclosed</p>
+<p>before</p>
+<p>Potential for bias as reports are not</p>
+<p>required to be audited.</p>
+<p>Increase the level of forward-looking</p>
+<h4>Benefits and limitations of the IR framework</h4>
+<h4>Benefits</h4>
+<h4>Limitations</h4>
+<p>Can use as a guidance to prepare the report Difficult to compare different entities</p>
+<p>Being principle based enable entities of any</p>
+<p>industry to use</p>
+<p>Being principle-based increases subjectivity</p>
+<p>Increases user familiarity with the</p>
+<p>terminology and the format of IR</p>
+<p>Requires experienced staff to apply the</p>
+<p>concepts properly</p></section></div></article>
+<article class="topic-card searchable" id="long-term-finance" data-title="Long Term Finance">
+<div class="topic-head"><div><h2>Long Term Finance</h2><div class="meta">3 pages · Source: Long Term Finance.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><h4>Long Term Finance</h4>
+<h4>Equity Finance</h4>
+<p>•</p>
+<p>Ordinary equity shares</p>
+<ul>
+<li>No fixed Interest payments</li>
+<li>No repayment required</li>
+<li>Shares can be liquidated easily if the company is listed</li>
+<li>Cost of equity is high (Due to the high risk)</li>
+<li>No tax relief on dividend payments</li>
+<li>Ownership might dilute if new shares are being issued</li>
+</ul>
+<p>•</p>
+<p>Preference shares</p>
+<p>-</p>
+<p>No ownership/ voting rights</p>
+<p>-</p>
+<p>Fixed dividend (coupon rate * par value)</p>
+<p>-</p>
+<p>Paid in preference to ordinary dividends</p>
+<h4>Capital markets:</h4>
+<p>-Primary function: Ability to raise finance for the companies (either debt or equity)</p>
+<p>-Secondary function: Enable shareholders to sell their shares</p>
+<p>Listed entities</p>
+<p>Advantages</p>
+<p>Disadvantages</p>
+<p>Creating a market for the company’s shares</p>
+<p>Strict rules and regulations of. governing bodies</p>
+<p>Increasing public awareness and public interest</p>
+<p>Increasing accountability to shareholders and</p>
+<p>stakeholders.</p>
+<p>Access to additional finance sources</p>
+<p>Increasing costs of compliance with reporting</p>
+<p>requirements.</p>
+<p>Increased acquisition opportunities</p>
+<p>Become more vulnerable to a takeover bid</p>
+<p>Exit route for existing shareholders</p>
+<p>Need to maintain dividend and profit growth</p>
+<p>trends</p>
+<p>Enhanced status and financial standing of the</p>
+<p>company.</p>
+<p>Increased media interest</p>
+<p>Ability to implement employment share option</p>
+<p>schemes</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><p>Methods of listing</p>
+<p>•</p>
+<p>Fixed price for sale - Offer to the general public at a fixed price</p>
+<p>•</p>
+<p>Offer for sale by tender- Investors are able. to. Bid for shares and the shares are. Issued only</p>
+<p>to those investors who have bid at the strike price or above.</p>
+<p>•</p>
+<p>Price placing- Shares are placed to institutional investors. Cost of issuing is slightly low and</p>
+<p>thus the share issue becomes slightly cheaper.</p>
+<p>Both fixed price for sale and offer for sale by tender are categories of Initial Public Offering (IPO).</p>
+<h4>Rights Issue</h4>
+<p>New shares are offered for sale to existing shareholders, in proportion to the size of their</p>
+<p>shareholding. Rights issues are cheaper to organise than a public share issue.</p>
+<p>•</p>
+<p>After the announcement. Of rights issue there’s a tendency of share price decreasing due to</p>
+<p>the uncertainty about the future profits, future dividends, consequences of. the issue.</p>
+<p>•</p>
+<p>After the issue, the share price will again decrease as there are more share in issue and the</p>
+<p>new shares were issued below the market price.</p>
+<p>Implications of a rights issue</p>
+<h4>1. (a) From the viewpoint of the shareholders:</h4>
+<p>-</p>
+<p>They have the option of buying shares at preferential price</p>
+<p>-</p>
+<p>They have the option of withdrawing cash by selling their rights</p>
+<p>-</p>
+<p>They are able to maintain their existing relative voting position (by exercising the rights).</p>
+<h4>2. (b) From the viewpoint of the company:</h4>
+<p>-</p>
+<p>Is simple and cheap to implement</p>
+<p>-</p>
+<p>Is usually successful (&#x27;fully subscribed&#x27;)</p>
+<p>-</p>
+<p>Often provides favourable publicity.</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><h4>Debt Finance</h4>
+<p>Factors to consider when issuing debt</p>
+<p>1. Interest is tax deductible, thus cheaper than equity finance</p>
+<p>2. Interest should be paid prior. To the dividends irrespective of the profit levels</p>
+<p>3. Require some form of. security acceptable by the debt provider (Collateral)</p>
+<p>4. Covenants may get imposed on the entity. Ex:) Minimum cash balances, dividend payout</p>
+<p>restrictions, issue of further debt, etc.</p>
+<p>Types of debt finance</p>
+<p>1. Bank loans</p>
+<p>2. Revolving credit facilities- borrower may use or withdraw funds up to a pre- approved credit</p>
+<p>limit. The amount of available credit decreases and increases as funds are borrowed and</p>
+<p>then repaid.</p>
+<p>3. Money market borrowings- Financial institutions and dealers in money or credit who wish</p>
+<p>to either borrow or lend.</p>
+<p>4. Bonds- Issuer owns the holders a debt and depending on the terms of the bond, issuer is</p>
+<p>obliged to pay interest and principal amount.</p>
+<p>*Gearing ratio represents long term risk of borrowing and the interest cover ratio represents the</p>
+<p>short term risk of borrowing.</p>
+<p>Other sources of finance</p>
+<p>•</p>
+<p>Existing cash balance</p>
+<p>•</p>
+<p>Sale and leaseback</p>
+<p>•</p>
+<p>Grants</p>
+<p>•</p>
+<p>Convertible debt</p>
+<p>•</p>
+<p>Venture capital</p>
+<p>•</p>
+<p>Business angels</p>
+<p>•</p>
+<p>Debt attached with warrants</p></section></div></article>
+<article class="topic-card searchable" id="wacc" data-title="WACC">
+<div class="topic-head"><div><h2>WACC</h2><div class="meta">5 pages · Source: WACC.pdf</div></div><button class="collapse" aria-expanded="true">Collapse</button></div>
+<div class="topic-content"><section class="pdf-page"><div class="page-label">Page 1</div><p>Weighted Average Cost of Capital</p>
+<p>Weighted average cost of capital is the average cost of the company’s finance (equity, loan</p>
+<p>notes, bank loans, and preference shares) weighted according to the proportion each element</p>
+<p>bears to the total pool of funds.</p>
+<h5>WACC can be used to evaluate the company’s future projects if the following conditions</h5>
+<h4>apply:</h4>
+<ul>
+<li>No change in financial risk (Gearing ratio is same)</li>
+<li>No change in business risk in the new project</li>
+<li>Perfect capital markets (True opportunity cost of the investment is represented by</li>
+</ul>
+<h4>cost of capital)</h4>
+<ul>
+<li>Small project - costs of capital calculated refer to the minimum required return of</li>
+</ul>
+<p>marginal investors and therefore are only appropriate for the evaluation of marginal</p>
+<p>changes in the company’s total investment.</p>
+<ul>
+<li>Pooled funds - All funds are regarded as forming a pool out of which all projects are</li>
+</ul>
+<p>financed.</p>
+<p>Market Value of sources of finance</p>
+<p>1. Ordinary shares - Ex-div price per share x number of shares in issue</p>
+<p>2. Preference shares - Ex-div price per share x number of shares in issue</p>
+<p>3. Debentures - Book value x market value / 100</p>
+<p>4. Bank loans - Book value (market value does not exist)</p></section>
+<section class="pdf-page"><div class="page-label">Page 2</div><h4>Cost of Equity (Ke)</h4>
+<p>Rate of return requested by the equity shareholders for their investments. Dividend valuation</p>
+<p>model is used to obtain the cost of equity.</p>
+<p>Dividend growth rate (g) can be stablished via</p>
+<p>1. Historic growth model</p>
+<p>2. Gordon’s growth model</p>
+<h4>Cost of Preference shares (Kp)</h4>
+<p>Fixed rate charge to the company in the form of a dividend rather than in terms of interest.</p>
+<p>Normally treated as debt rather than equity. But dividend is not tax deductible.</p></section>
+<section class="pdf-page"><div class="page-label">Page 3</div><h4>Cost of Debt (Kd)</h4>
+<h5>Cost of debt is the interest paid on the loan less any tax deductions.</h5>
+<p>•</p>
+<h4>For an ordinary long term bank loan, cost of debt is as follows:</h4>
+<div class="formula">Kd = Interest rate * (1- Tax rate)</div>
+<p>Debt can be irredeemable, redeemable or convertible</p>
+<p>•</p>
+<p>For irredeemable debt, IRR of the future cashflows is calculated</p>
+<p>•</p>
+<p>For redeemable debt, IRR of the future cashflows is calculated and it includes the</p>
+<p>redemption value of the debt in n years’ time. Relevant cashflows would be as</p>
+<h4>follows:</h4>
+<p>Time Description Cashflow</p>
+<p>•</p>
+<p>For convertible debt, the holder has the option to redeem for cash or for shares.</p>
+<p>Highest of the share value conversion and cash redemption is considered and</p>
+<p>calculated IRR.</p></section>
+<section class="pdf-page"><div class="page-label">Page 4</div></section>
+<section class="pdf-page"><div class="page-label">Page 5</div></section></div></article></main></div>
+<script>
+const q=document.getElementById('search'), cards=[...document.querySelectorAll('.searchable')], no=document.getElementById('noResults');
+function clearMarks(el){el.querySelectorAll('mark').forEach(m=>m.replaceWith(document.createTextNode(m.textContent)));}
+q.addEventListener('input',()=>{const term=q.value.trim().toLowerCase();let visible=0;cards.forEach(c=>{clearMarks(c);const txt=c.innerText.toLowerCase();const ok=!term||txt.includes(term);c.classList.toggle('hidden',!ok);if(ok)visible++;});no.style.display=visible?'none':'block';});
+document.querySelectorAll('.collapse').forEach(b=>b.onclick=()=>{const c=b.closest('.topic-card');c.classList.toggle('collapsed');const open=!c.classList.contains('collapsed');b.textContent=open?'Collapse':'Expand';b.setAttribute('aria-expanded',open)});
+document.getElementById('expand').onclick=()=>{cards.forEach(c=>c.classList.remove('collapsed'));document.querySelectorAll('.collapse').forEach(b=>{b.textContent='Collapse';b.setAttribute('aria-expanded','true')})};
+document.getElementById('theme').onclick=()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'};
+const links=[...document.querySelectorAll('[data-nav]')];const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove('active'));const a=links.find(x=>x.getAttribute('href')==='#'+e.target.id);if(a)a.classList.add('active')}}),{rootMargin:'-20% 0px -70% 0px'});cards.forEach(c=>obs.observe(c));
+</script></body></html>
